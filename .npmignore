@@ -1,0 +1,6 @@
+node_modules/
+tests/
+local/
+.idea/
+.github/
+.editorconfig
