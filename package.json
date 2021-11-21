@@ -1,0 +1,43 @@
+{
+  "name": "vue3-phonenumber-input",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "develop": "vite build",
+    "check:type": "vue-tsc --noEmit",
+    "build": "vite build --watch false",
+    "build:all": "npm run check:type && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "phone number",
+    "phone",
+    "input",
+    "vue3",
+    "vue3 input",
+    "country input"
+  ],
+  "author": "Techie Oriname",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.11.9",
+    "@vitejs/plugin-vue": "^1.9.4",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "prettier": "^2.4.1",
+    "sass": "^1.43.4",
+    "tailwindcss": "^2.2.19",
+    "vite": "^2.6.14"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.10.2",
+    "@vueuse/core": "^7.0.0",
+    "libphonenumber-js": "^1.9.43",
+    "typescript": "^4.5.2",
+    "vee-validate": "^4.5.6",
+    "vue": "^3.2.20",
+    "vue-tsc": "^0.28.3",
+    "yup": "^0.32.11"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "vue3-phone-input-tests",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@techie04/vue3-phone-input": "file:..",
+    "vue": "^3.2.20"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.9",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "typescript": "^4.5.2",
+    "vite": "^2.6.4",
+    "vue-tsc": "^0.3.0"
+  },
+  "scripts": {
+    "develop": "vite",
+    "build": "vite build",
+    "build:all": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  }
+}
