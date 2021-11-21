@@ -1,14 +1,16 @@
 {
-  "name": "vue3-phonenumber-input",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "develop": "vite build",
-    "check:type": "vue-tsc --noEmit",
-    "build": "vite build --watch false",
-    "build:all": "npm run check:type && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "@techie04/vue3-phonenumber-input",
+  "version": "0.0.1",
+  "description": "vue3 phone number input with country dropdown",
+  "main": "dist/js/vue3-phone-input.umd.js",
+  "module": "dist/js/vue3-phone-input.esm.js",
+  "types": "src/js/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techieoriname/vue3-Phone-Number-Input.git"
+  },
+  "bugs": {
+    "url": "https://github.com/techieoriname/vue3-Phone-Number-Input/issues"
   },
   "keywords": [
     "phone number",
@@ -19,7 +21,14 @@
     "country input"
   ],
   "author": "Techie Oriname",
-  "license": "ISC",
+  "license": "MIT",
+  "scripts": {
+    "develop": "vite build",
+    "check:type": "vue-tsc --noEmit",
+    "build": "vite build --watch false",
+    "build:all": "yarn check:type && yarn build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
     "@types/node": "^16.11.9",
     "@vitejs/plugin-vue": "^1.9.4",
