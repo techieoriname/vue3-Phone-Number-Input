@@ -67,18 +67,6 @@ const { errors } = useForm({
 
 const { value: phone } = useField('phone');
 
-const intlFormat = computed(() => {
-    if (phone.value) {
-        const phoneNumber = parsePhoneNumber(
-            phone.value as string,
-            selectedCountry.value.alpha2Code as CountryCode
-        );
-
-        return phoneNumber?.number;
-    }
-    return false;
-});
-
 // Country dropdown pop-down using popper
 const countryElement = document.querySelector('#countryElement') as HTMLElement;
 const dropdown = document.querySelector('#countryDropDown') as HTMLElement;
