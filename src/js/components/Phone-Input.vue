@@ -34,7 +34,17 @@ const props = withDefaults(defineProps<Props>(), {
 
 const emit = defineEmits(['update:modelValue']);
 
-const selectedCountry = ref<number | any>(162);
+// const selectedCountry = ref<number | any>(162);
+const selectedCountry = ref<CountryType>({
+    name: 'Nigeria',
+    topLevelDomain: ['.ng'],
+    alpha2Code: 'NG',
+    alpha3Code: 'NGA',
+    callingCodes: ['234'],
+    capital: 'Abuja',
+    altSpellings: ['NG', 'Nijeriya', 'Na\u00edj\u00edr\u00ed\u00e0', 'Federal Republic of Nigeria'],
+    region: 'Africa'
+});
 const countryDropdown = ref(false);
 const countries: Array<CountryType> = all;
 const search = ref('');
@@ -62,8 +72,8 @@ const { value: phone } = useField('phone');
 const intlFormat = computed(() => {
     if (phone.value) {
         const phoneNumber = parsePhoneNumber(
-            // phone.value,
-            countries[selectedCountry.value].alpha2Code
+            phone.value as string,
+            selectedCountry.value.alpha2Code as CountryCode
         );
 
         return phoneNumber?.number;
@@ -92,9 +102,9 @@ onClickOutside(target, (event) => {
 /**
  * @params countryIndex Hide country dropdown and assign selected country index to countryIndex
  */
-function onCountrySelect(countryIndex: number) {
+function onCountrySelect(country: CountryType) {
     countryDropdown.value = false;
-    selectedCountry.value = countryIndex;
+    selectedCountry.value = country;
 }
 
 // Format number to international format
@@ -102,7 +112,7 @@ function formatNumber(event: Event) {
     const value = (event.target as HTMLInputElement).value;
     emit(
         'update:modelValue',
-        new AsYouType(countries[selectedCountry.value].alpha2Code.toString() as CountryCode).input(
+        new AsYouType(selectedCountry.value.alpha2Code.toString() as CountryCode).input(
             props.modelValue
         )
     );
@@ -139,7 +149,7 @@ function getImageUrl(name: string) {
                             :class="[props.inputClassNames, props.inputBackgroundColor]"
                             type="tel"
                             readonly
-                            :value="`+${countries[selectedCountry].callingCodes}`"
+                            :value="'+' + selectedCountry.callingCodes"
                             @click="toggleCountryDropdown"
                         />
                     </div>
@@ -186,7 +196,7 @@ function getImageUrl(name: string) {
                                 v-for="(c, i) in allCountries"
                                 :key="i"
                                 class="py-2 flex gap-x-2 cursor-pointer hover:hoverbg"
-                                @click="onCountrySelect(i)"
+                                @click="onCountrySelect(c)"
                             >
                                 <img
                                     class="w-4"
