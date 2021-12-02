@@ -1,6 +1,6 @@
 {
   "name": "@techie04/vue3-phonenumber-input",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "vue3 phone number input with country dropdown",
   "main": "dist/js/vue3-phone-input.umd.js",
   "module": "dist/js/vue3-phone-input.esm.js",
