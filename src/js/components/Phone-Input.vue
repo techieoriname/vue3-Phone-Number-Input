@@ -47,16 +47,14 @@ const selectedCountry = ref<CountryType>({
 });
 const countryDropdown = ref(false);
 const countries: Array<CountryType> = all;
-const search = ref('');
 const target = ref(null);
 
+//search
+const search = ref('');
 const allCountries = computed(() => {
-    if (search.value.length) {
-        return countries.filter((country) => {
-            return country.name.toLocaleLowerCase().includes(search.value.toLocaleLowerCase());
-        });
-    }
-    return countries;
+    return all.filter((country) => {
+        return country.name.toLocaleLowerCase().includes(search.value.toLocaleLowerCase());
+    });
 });
 
 const schema = yup.object({
@@ -138,9 +136,7 @@ function getImageUrl(name: string) {
                     >
                         <img
                             class="w-7"
-                            :src="`https://flagcdn.com/w80/${countries[
-                                selectedCountry
-                            ].alpha2Code.toLowerCase()}.png`"
+                            :src="`https://flagcdn.com/w80/${selectedCountry.alpha2Code.toLowerCase()}.png`"
                             alt=""
                         />
                         <input
@@ -184,7 +180,7 @@ function getImageUrl(name: string) {
                                     border-2 border-[#AAA]
                                     px-2
                                     outline-none
-                                    focus:ring-0 focus:border-none
+                                    focus:ring-0 focus:border-none focus:ring-0 focus:border-none
                                     w-36
                                 "
                                 type="text"
