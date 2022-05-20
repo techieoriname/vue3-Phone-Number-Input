@@ -1,2 +1,1 @@
-export { default as PhoneInput } from './Phone-Input.vue';
-export {};
+export { default as PhoneInput } from './PhoneInput.vue';
