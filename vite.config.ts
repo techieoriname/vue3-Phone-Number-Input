@@ -19,16 +19,21 @@ export default defineConfig({
             }
         },
         emptyOutDir: false,
-        watch: {
-            include: 'src/**'
-        },
+        // watch: {
+        //     include: 'src/**'
+        // },
         rollupOptions: {
             external: ['vue'],
             output: {
                 globals: {
                     vue: 'Vue'
                 },
-                exports: 'named'
+                exports: 'named',
+                assetFileNames: (assetInfo) => {
+                    if (assetInfo.name === 'style.css')
+                        return 'css/vue3-phone-input.css';
+                    return assetInfo.name;
+                },
             }
         },
         minify: false
