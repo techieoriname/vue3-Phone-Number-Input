@@ -2,9 +2,9 @@
   "name": "@techie04/vue3-phonenumber-input",
   "version": "0.0.6",
   "description": "vue3 phone number input with country dropdown",
-  "main": "dist/js/vue3-phone-input.umd.js",
-  "module": "dist/js/vue3-phone-input.esm.js",
-  "types": "src/js/index.ts",
+  "main": "dist/vue3-phone-input.umd.js",
+  "module": "dist/vue3-phone-input.esm.js",
+  "types": "dist/index.d.ts",
   "style": "dist/css/vue3-phone-input.css",
   "repository": {
     "type": "git",
@@ -30,16 +30,18 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "build:css": "tailwindcss -i ./src/js/style.css -o ./dist/css/vue3-phone-input.css --minify",
+    "build:css": "tailwindcss -i src/style.css -o ./dist/css/vue3-phone-input.css --minify",
     "build:all": "yarn build && yarn build:css",
     "build:watch": "vite build --watch",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
+    "path": "^0.12.7",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.5.4",
     "vite": "^4.3.9",
+    "vite-plugin-dts": "^4.2.1",
     "vue-tsc": "^2.1.6"
   },
   "dependencies": {
