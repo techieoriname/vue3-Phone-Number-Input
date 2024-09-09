@@ -45,7 +45,7 @@ Thumbs.db
 *.generated.*
 
 # Ignore flags directory
-src/js/flags/**
+src/flags/**
 
 # Ignore all image files (in case flags are stored in different locations)
 *.png
