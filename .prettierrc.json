@@ -2,7 +2,8 @@
   "tabWidth": 4,
   "semi": true,
   "trailingComma": "none",
-  "singleQuote": true,
-  "printWidth": 100,
+  "singleQuote": false,
+  "printWidth": 90,
+  "parser": "typescript",
   "endOfLine": "auto"
 }

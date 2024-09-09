@@ -1,0 +1,61 @@
+# Ignore build output
+dist
+
+# Ignore node modules
+node_modules
+
+# Ignore package manager lock files
+yarn.lock
+package-lock.json
+
+# Ignore TypeScript declaration files
+*.d.ts
+
+# Ignore configuration files
+*.config.js
+*.config.ts
+vite.config.ts
+
+# Ignore all JSON files (including allcountries.json)
+*.json
+
+# Ignore CSS output
+dist/css/vue3-phone-input.css
+
+# Ignore markdown files
+*.md
+
+# Ignore environment files
+.env*
+
+# Ignore IDE and editor folders
+.vscode
+.idea
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore test files if you have any
+**/__tests__/**
+**/*.test.ts
+**/*.spec.ts
+
+# Ignore any auto-generated files
+*.generated.*
+
+# Ignore flags directory
+src/js/flags/**
+
+# Ignore all image files (in case flags are stored in different locations)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.log
+
+.gitignore
+.npmignore
+.npmrc
+.prettierignore
