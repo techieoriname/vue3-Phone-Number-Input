@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "ESNext",
     "useDefineForClassFields": true,
     "strict": true,
     "jsx": "preserve",
@@ -19,12 +19,11 @@
     ]
   },
   "include": [
-    "src/js/**/*.ts",
+    "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.vue"
   ],
   "exclude": [
-    "node_modules",
-    "src/js/**/*.test.ts"
+    "node_modules"
   ]
 }
