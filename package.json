@@ -1,6 +1,6 @@
 {
   "name": "@techie04/vue3-phonenumber-input",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "vue3 phone number input with country dropdown",
   "main": "dist/vue3-phone-input.umd.js",
   "module": "dist/vue3-phone-input.esm.js",
@@ -8,7 +8,7 @@
   "style": "dist/css/vue3-phone-input.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/techieoriname/vue3-Phone-Number-Input.git"
+    "url": "git+https://github.com/techieoriname/vue3-Phone-Number-Input.git"
   },
   "bugs": {
     "url": "https://github.com/techieoriname/vue3-Phone-Number-Input/issues"
